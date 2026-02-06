@@ -1,0 +1,161 @@
+.calendar {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.nav-btn:hover {
+  background: #f5f5f5;
+}
+
+.month-year {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.today-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #555;
+}
+
+.today-btn:hover {
+  background: #e0e0e0;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.weekday {
+  padding: 12px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day {
+  min-height: 100px;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.calendar-day:nth-child(7n) {
+  border-right: none;
+}
+
+.calendar-day:hover {
+  background: #f9f9f9;
+}
+
+.calendar-day.empty {
+  background: #fafafa;
+  cursor: default;
+}
+
+.calendar-day.today {
+  background: #f0f7ff;
+}
+
+.calendar-day.today .day-number {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-number {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.day-chores {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chore-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e8f4fd;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  border-left: 3px solid #2563eb;
+}
+
+.chore-item:hover {
+  background: #d4ebfc;
+}
+
+.chore-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  color: #333;
+}
+
+.complete-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 14px;
+  padding: 0 4px;
+  opacity: 0.6;
+}
+
+.complete-btn:hover {
+  opacity: 1;
+}
+
+.more-chores {
+  font-size: 11px;
+  color: #666;
+  padding: 2px 4px;
+}
